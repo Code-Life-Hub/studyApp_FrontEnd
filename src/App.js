@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './styles/App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./styles/App.css";
+
+//eslint-disable-next-line
+import CookiesConsent from "./components/utils/CookiesConsent";
 
 function App() {
   return (
@@ -17,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <CookiesConsent />
       </header>
     </div>
   );
