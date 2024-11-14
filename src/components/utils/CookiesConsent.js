@@ -19,7 +19,7 @@ const CookiesConsent = () => {
       {!isConsentAccepted && (
         <CookieConsent
           location="bottom"
-          buttonText="Accept"
+          buttonText="Accept All Cookies"
           cookieName="cookieConsent"
           onAccept={handleAcceptCookie}
         >
