@@ -23,7 +23,7 @@ const CookiesConsent = () => {
           cookieName="cookieConsent"
           onAccept={handleAcceptCookie}
         >
-          This website uses cookies to enhance the user experience.
+          This website uses cookies to enhance your user experience.
         </CookieConsent>
       )}
     </div>
