@@ -129,15 +129,6 @@ export default class UserCreateForm extends Component {
           </label>
 
           <label>
-            Account Number:
-            <input
-              type="number"
-              value={this.state.user_account_number}
-              onChange={this.onChangeUserAccountNumber}
-            />
-          </label>
-
-          <label>
             Username:
             <input
               type="text"
@@ -176,48 +167,6 @@ export default class UserCreateForm extends Component {
               <option value="Email">Email</option>
               <option value="Phone">Phone</option>
               <option value="SMS">SMS</option>
-            </select>
-          </label>
-
-          <label>
-            Session ID:
-            <input
-              type="text"
-              required
-              value={this.state.session_id}
-              onChange={this.onChangeSessionID}
-            />
-          </label>
-
-          <label>
-            Cookie:
-            <input
-              type="text"
-              value={this.state.user_cookie}
-              onChange={this.onChangeUserCookie}
-            />
-          </label>
-
-          <label>
-            Password Reset Token:
-            <input
-              type="text"
-              value={this.state.user_pas_rst_tkn}
-              onChange={this.onChangeUserPasRstTkn}
-            />
-          </label>
-
-          <label>
-            Access Level:
-            <select
-              required
-              value={this.state.user_access_level}
-              onChange={this.onChangeUserAccessLevel}
-            >
-              <option value="1">Admin</option>
-              <option value="2" selected>
-                User
-              </option>
             </select>
           </label>
 
