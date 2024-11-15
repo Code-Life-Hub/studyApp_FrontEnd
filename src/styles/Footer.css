@@ -5,22 +5,19 @@
         left: 0;
         width: 100%;
         text-align: center;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 10px;
-        font-size: 1em;
-        color: #0cb403;
-        background-color: #000;
+        font-size: 10px;
+        color: #12e407;
+        background-color: black;
     }
 
     .footerEmail {
-        color: #0cb403;
+        color: #12e407;
         text-decoration: none;
 
     }
 
     .footerEmail:hover {
-        color: rgb(12, 50, 238);
+        color: white;
         text-decoration: underline;
     }
 }
