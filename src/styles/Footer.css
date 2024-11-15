@@ -1,0 +1,52 @@
+@media (min-width: 769px) {
+    .trademark-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 10px;
+        font-size: 1em;
+        color: #0cb403;
+        background-color: #000;
+    }
+
+    .footerEmail {
+        color: #0cb403;
+        text-decoration: none;
+
+    }
+
+    .footerEmail:hover {
+        color: rgb(12, 50, 238);
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+    .trademark-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        padding: 10px;
+        font-size: 1em;
+        color: #0cb403;
+        background-color: #000;
+    }
+
+    .footerEmail {
+        color: #0cb403;
+        text-decoration: none;
+    }
+
+    .footerEmail:hover {
+        color: rgb(12, 50, 238);
+        text-decoration: underline;
+    }
+
+}
