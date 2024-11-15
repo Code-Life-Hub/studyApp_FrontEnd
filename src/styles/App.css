@@ -9,6 +9,13 @@
     margin-bottom: 25px;
   }
 
+  .PageTitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: white;
+  }
+
   .App-header {
     background-color: black;
     min-height: 100vh;
@@ -17,8 +24,69 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: red;
+    color: white;
+
   }
+
+  .UserLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
+  .Login-Register {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rememberMe {
+    text-align: center;
+  }
+
+  .ShowPsw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2vh;
+  }
+
+  .ForgotPsw {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* login and create account buttons here */
+  #Login.login {
+    width: 33%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: solid grey 2px;
+    border-radius: 10px;
+  }
+
+  #register.register {
+    width: 33%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: solid grey 2px;
+    border-radius: 48%;
+    padding: 10px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -32,7 +100,7 @@
   }
 
   .App-header {
-    background-color: #282c34;
+    background-color: black;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
