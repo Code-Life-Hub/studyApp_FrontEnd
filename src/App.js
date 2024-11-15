@@ -5,6 +5,8 @@ import Footer from "./components/utils/Footer";
 import CookiesConsent from "./components/utils/CookiesConsent";
 import ScrollToTop from "./components/utils/ScrollToTop";
 
+
+
 function App() {
   return (
     <header className="App-header">
@@ -38,7 +40,6 @@ function App() {
               autoCapitalize="off"
             />
           </div>
-          {/* <!-- form-row --> */}
           {/* <!-- Created Remember Me Checkbox --> */}
           <div className="form-row">
             <label htmlFor="rememberme">Keep Me Logged In</label>
@@ -60,8 +61,8 @@ function App() {
           {/* <!-- Added Password Reset button to login --> */}
           <div className="pass-reset">
             <a href="pass_rst" className="btn btn-primary btn-width-full">
-              This needs its ref redefined when counterpart is complete. Forgot
-              Password?
+              {/* This needs its ref redefined when counterpart is complete. Forgot
+              Password? */}
               {" "}
             </a>
           </div>
