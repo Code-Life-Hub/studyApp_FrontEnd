@@ -2,8 +2,103 @@
 
 @media (min-width: 769px) {
 
+  /* Additions for the hamburger menu */
+  .App {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    border-top: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cookieConsent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-top: solid grey 3px;
+    border-bottom: solid grey 3px;
+    position: center;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: grey;
+    border-top: none;
+  }
+
+  .App-body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    font-size: extra-large;
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+
+
+  .header-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: silver;
+    margin: 0;
+    height: 10vh;
+    border-bottom: solid grey 3px;
+    border-top: solid grey 3px;
+  }
+
+
+  .hamburger-btn {
+    background: none;
+    position: fixed;
+    border: solid white 3px;
+    border-radius: 25%;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin: 1%;
+    padding-top: 0px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+
+  .hamburger-btn:hover {
+    transform: scale(1.0);
+    color: #39ff14;
+    border: solid white 2px;
+  }
+
   .backToTop {
     display: block;
+    border: solid red 2px;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 25px;
@@ -12,21 +107,10 @@
   .PageTitle {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: white;
   }
 
-  .App-header {
-    background-color: black;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-
-  }
 
   .UserLogin {
     display: flex;
@@ -39,13 +123,15 @@
     width: 400px;
   }
 
-  .Login-Register {
+  .rememberMe {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-self: center;
   }
 
-  .rememberMe {
-    text-align: center;
+  .rememberMe input {
+    align-self: center;
+    transform: scale(1.5);
   }
 
   .ShowPsw {
@@ -68,27 +154,72 @@
   }
 
   /* login and create account buttons here */
+  .Login-Register {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    flex-wrap: no-wrap;
+  }
+
   #Login.login {
-    width: 33%;
+    width: 100%;
+    height: 100%;
     background-color: black;
     color: white;
     font-weight: bold;
-    border: solid grey 2px;
+    border: solid grey 3px;
     border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .loginButton {
+    width: 9%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: solid grey 3px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  #Login.login:hover {
+    background-color: white;
+    color: black;
   }
 
   #register.register {
-    width: 33%;
+    width: 100%;
+    height: 100%;
     background-color: black;
     color: white;
     font-weight: bold;
-    border: solid grey 2px;
-    border-radius: 48%;
-    padding: 10px;
+    border: solid grey 3px;
+    border-radius: 48px;
+    font-size: 15px;
+  }
+
+  .registerButton {
+    width: 15%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: solid grey 3px;
+    border-radius: 48px;
+    font-size: 15px;
+  }
+
+  #register.register:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .ForgotPsw:hover {
+    color: cyan;
   }
 
 }
 
+/* MOBILE BEGINS HERE----------------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .App {
     text-align: center;
@@ -99,7 +230,7 @@
     pointer-events: none;
   }
 
-  .App-header {
+  .App-body {
     background-color: black;
     min-height: 100vh;
     display: flex;
@@ -114,13 +245,4 @@
     color: #61dafb;
   }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
 }

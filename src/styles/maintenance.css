@@ -1,0 +1,47 @@
+@media (min-width: 769px) {
+    .maintenance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+        font-family: Times New Roman;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .maintenance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+        font-family: Times New Roman;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}

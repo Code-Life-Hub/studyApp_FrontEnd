@@ -1,15 +1,17 @@
 import React from "react";
-import "../styles/privacyPolicy.css";
+import "../../styles/privacyPolicy.css";
 import ScrollToTop from "./ScrollToTop.js";
-import Footer from "../utils/footer.js";
+import "../../styles/Footer.css";
+import Footer from "./Footer";
 
-function PrivacyPolicy() {
+const privacyPolicy = () => {
   return (
     <div className="privacy-policy-container">
       <h1 className="privacy-policy-title">Privacy Policy</h1>
       <h2 className="privacy-policy-h2">
-        Your privacy is of utmost importance to me. I am committed to protecting your privacy and handling your
-        personal information with care and respect.
+        Your privacy is of utmost importance to me. I am committed to protecting
+        your privacy and handling your personal information with care and
+        respect.
       </h2>
       <div className="privacy-policy-content">
         <h3 className="privacy-policy-subtitle">Information I Collect:</h3>
@@ -88,6 +90,6 @@ function PrivacyPolicy() {
       <Footer />
     </div>
   );
-}
+};
 
-export default PrivacyPolicy;
+export default privacyPolicy;
