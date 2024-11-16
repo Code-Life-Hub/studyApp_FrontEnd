@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom"; // Remove BrowserRouter import
+import { Link, Routes, Route } from "react-router-dom";
+import "../../styles/App.css";
 import App from "../../App";
 
 function AppRouter() {
   return (
-    <div className="routerNav">
+    <nav className="routerNav">
       <div className="linkGroup">
         <Link to="/" title="Go to Home Page">
           Home
@@ -13,11 +14,10 @@ function AppRouter() {
           X
         </button>
       </div>
-
       <Routes>
         <Route path="/" element={<App />} />
       </Routes>
-    </div>
+    </nav>
   );
 }
 

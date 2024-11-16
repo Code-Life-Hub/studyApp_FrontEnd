@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/App.css";
 import "./styles/Footer.css";
 import Footer from "./components/utils/Footer";
@@ -8,9 +8,31 @@ import ShowPsw from "./components/utils/ShowPsw";
 import Header from "./components/utils/Header";
 
 function App() {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+
+  // State to handle the visibility of the nav menu
+  // If statement handling the visibility of the hamburger button
+  useEffect(() => {
+    const button = document.querySelector(".hamburger-btn");
+    if (button) {
+      button.style.visibility = isNavVisible ? "hidden" : "visible";
+    }
+  }, [isNavVisible]);
   return (
     <>
-      <Header />
+      <button
+        onClick={toggleNav}
+        className="hamburger-btn"
+        title="Click to Open Menu"
+      >
+        ☰
+      </button>
+      <Header isNavVisible={isNavVisible} toggleNav={toggleNav} />
+
 
       <main className="App-body">
         <div className="App">
@@ -91,9 +113,9 @@ function App() {
           </form>
         </div>
       </main>
-          <ScrollToTop />
-          <CookiesConsent />
-          <Footer />
+      <ScrollToTop />
+      <CookiesConsent />
+      <Footer />
     </>
   );
 }

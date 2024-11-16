@@ -1,22 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/App.css";
 
-function Header() {
-  // State to handle the visibility of the nav menu
-  const [isNavVisible, setIsNavVisible] = useState(false);
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  };
-  // If statement handling the visibility of the hamburger button
-  React.useEffect(() => {
-    const button = document.querySelector(".hamburger-btn");
-    if (button) {
-      button.style.visibility = isNavVisible ? "hidden" : "visible";
-    }
-  }, [isNavVisible]);
-  // rendering below
+function Header({ isNavVisible, toggleNav }) {
   return (
     <header className="App-header">
+      <h1
+        onClick={() => (window.location.href = "/")}
+        className="header-primary"
+        title="Study App"
+      >
+        Study App
+      </h1>
+      {/* Hamburger Button */}
       <button
         onClick={toggleNav}
         className="hamburger-btn"
@@ -25,13 +21,12 @@ function Header() {
         ☰
       </button>
 
-      <h1
-        onClick={() => (window.location.href = "/")}
-        className="header-primary"
-        title="Study App"
-      >
-        Study App
-      </h1>
+      {/* Navigation Links */}
+      <nav className={`navLinks ${isNavVisible ? "" : "hidden"}`}>
+        <Link to="/" className="linkAnchor" title="Home">
+          Home
+        </Link>
+      </nav>
     </header>
   );
 }
