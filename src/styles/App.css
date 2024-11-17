@@ -15,15 +15,10 @@
 
   .navLinks {
     display: flex;
-    width: 90%;
+    width: 50%;
     height: 7.5%;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    border-bottom: none;
-    z-index: 1000;
-    padding: 0 20px;
+    justify-content: flex-start;
+    padding-left: 1%;
   }
 
   .navLinks.hidden {
