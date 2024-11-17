@@ -45,7 +45,7 @@ function App() {
                 className="username_or_email"
                 type="text"
                 id="username_or_email"
-                // autoComplete="off" //I am leaving this here in case I change my mind.
+                // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
                 required
@@ -55,7 +55,7 @@ function App() {
                 className="password"
                 type="password"
                 id="password"
-                // autoComplete="off" //I am leaving this here in case I change my mind.
+                // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
                 required

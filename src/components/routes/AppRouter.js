@@ -10,13 +10,13 @@ function AppRouter() {
         <Link to="/" title="Go to Home Page">
           Home
         </Link>
-        <button className="closeNavButton" title="Click to Close Menu">
-          X
-        </button>
       </div>
       <Routes>
         <Route path="/" element={<App />} />
       </Routes>
+      <button className="closeNavButton" title="Click to Close Menu">
+        X
+      </button>
     </nav>
   );
 }
