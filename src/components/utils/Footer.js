@@ -35,7 +35,12 @@ const Footer = () => {
         className="trademark-footer"
         title="Trademark - © 2024 David Wright. All rights reserved."
       >
-        © {new Date().getFullYear()} David Wright. All rights reserved.
+        All rights reserved.
+        © {new Date().getFullYear()}
+        <a className="mailTo" href="mailTo:Dwright9157@icloud.com">
+          {" "}
+          David Wright
+        </a>
       </p>
     )
   );

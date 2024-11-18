@@ -50,11 +50,11 @@ function App() {
                 autoCapitalize="off"
                 required
               />
-              <label className="password">Password:</label>
+              <label className="Password">Password:</label>
               <input
-                className="password"
+                className="Password"
                 type="password"
-                id="password"
+                id="Password"
                 // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
