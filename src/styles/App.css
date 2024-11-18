@@ -31,9 +31,61 @@
     font-size: 1.5em;
   }
 
+  #username_or_email.username_or_email {
+    width: 60%;
+    border: solid black 2px;
+    background-color: silver;
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Times New Roman;
+  }
+
+  .username_or_email {
+    display: flex;
+  }
+
+  #username_or_email.username_or_email:active {
+    background-color: black;
+  }
+
+  .Password {
+    display: flex;
+  }
+
+  #Password.Password {
+    width: 60%;
+    border: solid black 2px;
+    background-color: silver;
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Times New Roman;
+  }
+
+  #Password.Password:active {
+    background-color: black;
+  }
+
+  .password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .navLinks>a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
   .navLinks>a:hover {
     align-self: center;
     text-decoration: underline;
+    color: rgb(38, 38, 254);
+    font-style: italic;
   }
 
   .closeNavButton {
@@ -107,13 +159,13 @@
 
 
   .hamburger-btn {
-    background: none;
+    background-color: grey;
     position: fixed;
-    border: solid white 3px;
+    border: solid silver 3px;
     border-radius: 25%;
     font-size: 35px;
     cursor: pointer;
-    color: white;
+    color: blue;
     outline: none;
     margin: 1%;
     padding-top: 0px;
@@ -125,8 +177,9 @@
 
   .hamburger-btn:hover {
     transform: scale(1.0);
-    color: #39ff14;
-    border: solid white 2px;
+    color: white;
+    background-color: blue;
+    border: solid white 3px;
   }
 
   .backToTop {
@@ -148,34 +201,71 @@
   .UserLogin {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    justify-content: center;
+    background-color: grey;
+    border: solid silver 5px;
     color: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 25%;
+    height: 25vh;
   }
 
   .rememberMe {
     display: flex;
+    font-size: 14px;
     flex-direction: column;
     align-self: center;
   }
 
-  .rememberMe input {
+  .rememberMe:hover {
     align-self: center;
+    transform: scale(1.2);
+  }
+
+  input.rememberme.rememberme:hover {
     transform: scale(1.5);
+    cursor: pointer;
+  }
+
+  .mailTo {
+    text-decoration: none;
+    font-size: 13px;
+    color: grey;
+  }
+
+  .mailTo:hover {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
   }
 
   .ShowPsw {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: black;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
     margin-top: 2vh;
+  }
+
+  .ShowPsw:hover {
+    align-self: center;
+    transform: scale(1.2);
+  }
+
+  .ShowPswCb {
+    align-self: center;
+    transform: scale(1.2);
+  }
+
+  .ShowPswCb:hover {
+    transform: scale(1.5);
+    cursor: pointer;
   }
 
   .ForgotPsw {
@@ -190,65 +280,57 @@
   .Login-Register {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
-    flex-wrap: no-wrap;
+    width: 60%;
   }
 
   #Login.login {
     width: 100%;
     height: 100%;
     background-color: black;
-    padding-top: 0;
+    border: solid grey 2px;
+    padding: 13px;
     margin-top: 0;
     font-weight: bold;
-    border: solid grey 3px;
     border-radius: 10px;
     font-size: 15px;
-  }
-
-  .loginButton {
-    width: 9%;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    border: solid grey 3px;
-    border-radius: 10px;
-    font-size: 15px;
+    color: silver;
   }
 
   #Login.login:hover {
-    background-color: white;
-    color: black;
+    background-color: grey;
+    color: blue;
+    font-size: 16px;
+    border: solid white 3px;
+    font-style: italic;
+    cursor: pointer;
   }
 
   #register.register {
     width: 100%;
     height: 100%;
     background-color: black;
-    color: white;
     font-weight: bold;
-    border: solid grey 3px;
-    border-radius: 48px;
+    border-radius: 10px;
+    border: solid grey 2px;
     font-size: 15px;
-  }
-
-  .registerButton {
-    width: 15%;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    border: solid grey 3px;
-    border-radius: 48px;
-    font-size: 15px;
+    color: silver;
+    padding: 12px;
   }
 
   #register.register:hover {
-    background-color: white;
-    color: black;
+    background-color: grey;
+    color: blue;
+    font-size: 16px;
+    border: solid white 3px;
+    font-style: italic;
+    cursor: pointer;
   }
 
   .ForgotPsw:hover {
-    color: cyan;
+    color: gold;
+    font-style: italic;
+    cursor: pointer;
+    font-size: 16px;
   }
 
 }
