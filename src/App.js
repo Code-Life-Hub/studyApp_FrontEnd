@@ -17,7 +17,7 @@ function App() {
             <h1 className="PageTitle">Login</h1>
             <br />
             <div className="UserLogin">
-              <label className="username_or_email">User:</label>
+              <label className="username_or_email">User</label>
               <input
                 className="username_or_email"
                 type="text"
@@ -25,7 +25,7 @@ function App() {
                 autoCorrect="off"
                 autoCapitalize="off"
               />
-              <label className="Password">Password:</label>
+              <label className="Password">Password</label>
               <input
                 className="Password"
                 type="password"
@@ -54,13 +54,6 @@ function App() {
             </div>
             <br />
             <div className="Login-Register">
-              <div className="register">
-                <a href="/userRegister">
-                  <button className="registerButton" type="button">
-                    Create Account
-                  </button>
-                </a>
-              </div>
               <div className="loginButton">
                 <button
                   type="submit"
