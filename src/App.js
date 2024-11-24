@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./styles/App.css";
 import "./styles/Footer.css";
 import Footer from "./components/utils/Footer";
@@ -33,10 +34,9 @@ function App() {
       </button>
       <Header isNavVisible={isNavVisible} toggleNav={toggleNav} />
 
-
       <main className="App-body">
         <div className="App">
-          <form action="" method="POST" className="login" id="login">
+          <form action="" method="GET" className="login" id="login">
             <h1 className="PageTitle">Login</h1>
             <br></br>
             <div className="UserLogin">
@@ -48,7 +48,6 @@ function App() {
                 // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
-                required
               />
               <label className="Password">Password:</label>
               <input
@@ -58,7 +57,6 @@ function App() {
                 // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
-                required
               />
               <div className="ShowPsw">
                 <label className="password">Show Password</label>
@@ -85,9 +83,11 @@ function App() {
 
             <div className="Login-Register">
               <div className="registerButton">
-                <button className="register" type="submit" id="register">
-                  Create Account
-                </button>
+                <Link to="/register">
+                  <button className="register" type="button">
+                    Create Account
+                  </button>
+                </Link>
               </div>
               <div className="loginButton">
                 <button
@@ -119,4 +119,5 @@ function App() {
     </>
   );
 }
+
 export default App;
