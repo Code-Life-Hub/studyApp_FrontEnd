@@ -1,6 +1,7 @@
 import { Component } from "react";
-// import "../../styles/UserRegister.css"
+import "../../styles/App.css";
 import API from "../utils/API";
+import Header from "../utils/Header";
 
 export default class UserCreateForm extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ export default class UserCreateForm extends Component {
   // Form Submission Handler
   onSubmit(e) {
     e.preventDefault();
-  
+
     const newUser = {
       user_full_name: this.state.user_full_name,
       user_username: this.state.user_username,
@@ -55,11 +56,17 @@ export default class UserCreateForm extends Component {
       user_tele: this.state.user_tele,
       user_contact_method: this.state.user_contact_method,
     };
-  
-    console.log(newUser);
-  
-    API.post("/signup", newUser)
-  
+
+    // Use the API object to make the POST request
+    API.post("/signup", newUser) // '/signup' is appended to the baseURL
+      .then((res) => {
+        console.log("User registered successfully:", res.data);
+      })
+      .catch((err) => {
+        console.error("Error during user registration:", err);
+      });
+
+    // Clear the form state
     this.setState({
       user_full_name: "",
       user_username: "",
@@ -68,12 +75,13 @@ export default class UserCreateForm extends Component {
       user_contact_method: "",
     });
   }
-  
+
   render() {
     return (
       <div>
+        <Header />
         <h2>Create an Account</h2>
-        <form onSubmit={this.onSubmit}>
+        <form className="newUserForm" onSubmit={this.onSubmit}>
           <label className="username_or_email">
             Full Name:
             <input

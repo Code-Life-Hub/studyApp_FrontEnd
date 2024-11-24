@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./styles/App.css";
 import "./styles/Footer.css";
 import Footer from "./components/utils/Footer";
@@ -9,43 +8,20 @@ import ShowPsw from "./components/utils/ShowPsw";
 import Header from "./components/utils/Header";
 
 function App() {
-  const [isNavVisible, setIsNavVisible] = useState(false);
-
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  };
-
-  // State to handle the visibility of the nav menu
-  // If statement handling the visibility of the hamburger button
-  useEffect(() => {
-    const button = document.querySelector(".hamburger-btn");
-    if (button) {
-      button.style.visibility = isNavVisible ? "hidden" : "visible";
-    }
-  }, [isNavVisible]);
   return (
     <>
-      <button
-        onClick={toggleNav}
-        className="hamburger-btn"
-        title="Click to Open Menu"
-      >
-        ☰
-      </button>
-      <Header isNavVisible={isNavVisible} toggleNav={toggleNav} />
-
+      <Header />
       <main className="App-body">
         <div className="App">
           <form action="" method="GET" className="login" id="login">
             <h1 className="PageTitle">Login</h1>
-            <br></br>
+            <br />
             <div className="UserLogin">
               <label className="username_or_email">User:</label>
               <input
                 className="username_or_email"
                 type="text"
                 id="username_or_email"
-                // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
               />
@@ -54,7 +30,6 @@ function App() {
                 className="Password"
                 type="password"
                 id="Password"
-                // autoComplete="off" // I am leaving this here in case I change my mind.
                 autoCorrect="off"
                 autoCapitalize="off"
               />
@@ -67,8 +42,7 @@ function App() {
                 />
               </div>
             </div>
-            <br></br>
-            {/* <!-- Created Remember Me Checkbox --> */}
+            <br />
             <div className="rememberMe">
               <label className="rememberme">Keep Me Logged In</label>
               <input
@@ -79,15 +53,13 @@ function App() {
               />
             </div>
             <br />
-            <br></br>
-
             <div className="Login-Register">
-              <div className="registerButton">
-                <Link to="/register">
-                  <button className="register" type="button">
+              <div className="register">
+                <a href="/userRegister">
+                  <button className="registerButton" type="button">
                     Create Account
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="loginButton">
                 <button
@@ -100,14 +72,10 @@ function App() {
                 </button>
               </div>
             </div>
-            <br></br>
-
-            {/* <!-- Added Password Reset button to login --> */}
+            <br />
             <div className="pass-reset">
-              <a href="pass_rst" className="ForgotPsw">
-                {/* This needs its ref redefined when counterpart is complete. Forgot
-              Password? */}
-                Forgot Password?{" "}
+              <a href="/pass_rst" className="ForgotPsw">
+                Forgot Password?
               </a>
             </div>
           </form>
