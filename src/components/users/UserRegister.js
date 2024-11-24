@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import axios from "axios";
+import { Component } from "react";
+// import "../../styles/UserRegister.css"
+import API from "../utils/API";
 
 export default class UserCreateForm extends Component {
   constructor(props) {
@@ -7,118 +8,73 @@ export default class UserCreateForm extends Component {
 
     this.state = {
       user_full_name: "",
-      user_account_number: "",
       user_username: "",
       user_email: "",
       user_tele: "",
       user_contact_method: "",
-      session_id: "",
-      user_cookie: "",
-      user_pas_rst_tkn: "",
-      user_access_level: "",
     };
 
+    // Binding event handlers
     this.onChangeUserFullName = this.onChangeUserFullName.bind(this);
-    this.onChangeUserAccountNumber = this.onChangeUserAccountNumber.bind(this);
     this.onChangeUserUsername = this.onChangeUserUsername.bind(this);
     this.onChangeUserEmail = this.onChangeUserEmail.bind(this);
     this.onChangeUserTele = this.onChangeUserTele.bind(this);
     this.onChangeUserContactMethod = this.onChangeUserContactMethod.bind(this);
-    this.onChangeSessionID = this.onChangeSessionID.bind(this);
-    this.onChangeUserCookie = this.onChangeUserCookie.bind(this);
-    this.onChangeUserPasRstTkn = this.onChangeUserPasRstTkn.bind(this);
-    this.onChangeUserAccessLevel = this.onChangeUserAccessLevel.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  // Event Handlers for Form Inputs
   onChangeUserFullName(e) {
-    this.setState({
-      user_full_name: e.target.value,
-    });
-  }
-
-  onChangeUserAccountNumber(e) {
-    this.setState({
-      user_account_number: e.target.value,
-    });
+    this.setState({ user_full_name: e.target.value });
   }
 
   onChangeUserUsername(e) {
-    this.setState({
-      user_username: e.target.value,
-    });
+    this.setState({ user_username: e.target.value });
   }
 
   onChangeUserEmail(e) {
-    this.setState({
-      user_email: e.target.value,
-    });
+    this.setState({ user_email: e.target.value });
   }
 
   onChangeUserTele(e) {
-    this.setState({
-      user_tele: e.target.value,
-    });
+    this.setState({ user_tele: e.target.value });
   }
 
   onChangeUserContactMethod(e) {
-    this.setState({
-      user_contact_method: e.target.value,
-    });
+    this.setState({ user_contact_method: e.target.value });
   }
 
-  onChangeSessionID(e) {
-    this.setState({
-      session_id: e.target.value,
-    });
-  }
-
-  onChangeUserCookie(e) {
-    this.setState({
-      user_cookie: e.target.value,
-    });
-  }
-
-  onChangeUserPasRstTkn(e) {
-    this.setState({
-      user_pas_rst_tkn: e.target.value,
-    });
-  }
-
-  onChangeUserAccessLevel(e) {
-    this.setState({
-      user_access_level: e.target.value,
-    });
-  }
-
+  // Form Submission Handler
   onSubmit(e) {
     e.preventDefault();
-
+  
     const newUser = {
       user_full_name: this.state.user_full_name,
-      user_account_number: this.state.user_account_number,
       user_username: this.state.user_username,
       user_email: this.state.user_email,
       user_tele: this.state.user_tele,
       user_contact_method: this.state.user_contact_method,
-      session_id: this.state.session_id,
-      user_cookie: this.state.user_cookie,
-      user_pas_rst_tkn: this.state.user_pas_rst_tkn,
-      user_access_level: this.state.user_access_level,
     };
-
-    axios
-      .post("/signup", newUser)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.error(err));
+  
+    console.log(newUser);
+  
+    API.post("/signup", newUser)
+  
+    this.setState({
+      user_full_name: "",
+      user_username: "",
+      user_email: "",
+      user_tele: "",
+      user_contact_method: "",
+    });
   }
-
+  
   render() {
     return (
       <div>
         <h2>Create an Account</h2>
         <form onSubmit={this.onSubmit}>
-          <label>
+          <label className="username_or_email">
             Full Name:
             <input
               type="text"
@@ -128,7 +84,7 @@ export default class UserCreateForm extends Component {
             />
           </label>
 
-          <label>
+          <label className="username_or_email">
             Username:
             <input
               type="text"
@@ -138,7 +94,7 @@ export default class UserCreateForm extends Component {
             />
           </label>
 
-          <label>
+          <label className="username_or_email">
             Email:
             <input
               type="email"
@@ -148,7 +104,7 @@ export default class UserCreateForm extends Component {
             />
           </label>
 
-          <label>
+          <label className="username_or_email">
             Telephone:
             <input
               type="tel"
@@ -157,7 +113,7 @@ export default class UserCreateForm extends Component {
             />
           </label>
 
-          <label>
+          <label className="username_or_email">
             Preferred Contact Method:
             <select
               required
@@ -170,7 +126,9 @@ export default class UserCreateForm extends Component {
             </select>
           </label>
 
-          <button type="submit">Sign Up</button>
+          <button className="login" type="submit">
+            Sign Up
+          </button>
         </form>
       </div>
     );

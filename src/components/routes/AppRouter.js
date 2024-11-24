@@ -1,23 +1,14 @@
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom";
-import "../../styles/App.css";
+import { Routes, Route } from "react-router-dom";
 import App from "../../App";
+import UserRegister from "../users/UserRegister";
 
 function AppRouter() {
   return (
-    <nav className="routerNav">
-      <div className="linkGroup">
-        <Link to="/" title="Go to Home Page">
-          Home
-        </Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
-      <button className="closeNavButton" title="Click to Close Menu">
-        X
-      </button>
-    </nav>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/userRegister" element={<UserRegister />} />
+    </Routes>
   );
 }
 

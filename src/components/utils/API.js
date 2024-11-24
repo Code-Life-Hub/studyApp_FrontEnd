@@ -1,1 +1,7 @@
-const API = process.env.REACT_APP_API_URL;
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "https://studyapp-backend-bjka.onrender.com/api",
+});
+
+export default API;
