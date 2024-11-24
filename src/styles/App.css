@@ -2,6 +2,22 @@
 
 @media (min-width: 769px) {
 
+  .nav-menu {
+    width: 25%;
+    color: white;
+    background: none;
+    border: none;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   /* Additions for the hamburger menu */
   .App {
     display: flex;
@@ -13,22 +29,19 @@
     border-top: none;
   }
 
-  .navLinks {
-    display: flex;
-    width: 50%;
-    height: 7.5%;
-    justify-content: flex-start;
-    padding-left: 1%;
-  }
-
-  .navLinks.hidden {
+  .navLink.hidden {
     display: none;
   }
 
-  .navLinks>a {
+  .navLink {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 25px;
+    padding: 3px;
+  }
+
+  .newUserForm {
+    color: white;
   }
 
   #username_or_email.username_or_email {
@@ -75,13 +88,13 @@
     font-size: 14px;
   }
 
-  .navLinks>a {
+  .navLinks {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 15px;
   }
 
-  .navLinks>a:hover {
+  .navLinks:hover {
     align-self: center;
     text-decoration: underline;
     color: rgb(38, 38, 254);
@@ -89,11 +102,11 @@
   }
 
   .closeNavButton {
-    background: none;
+    background-color: grey;
     position: fixed;
-    border: solid white 3px;
+    border: solid silver 2px;
     border-radius: 25%;
-    font-size: 35px;
+    font-size: 25px;
     cursor: pointer;
     color: white;
     outline: none;
@@ -105,8 +118,8 @@
   }
 
   .closeNavButton:hover {
-    background-color: black;
-    color: #39ff14;
+    background-color: blue;
+    color: white;
     border: solid white 2px;
   }
 
@@ -133,31 +146,6 @@
     color: white;
   }
 
-  .App-header {
-    display: flex;
-    flex-direction: column;
-    font-size: extra-large;
-    background-color: black;
-    color: white;
-    margin: 0;
-    width: 100%;
-  }
-
-
-  .header-primary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    color: silver;
-    margin-top: 0;
-    padding-right: 0.7%;
-    height: 10vh;
-    border-bottom: solid grey 3px;
-    border-top: solid grey 3px;
-  }
-
-
   .hamburger-btn {
     background-color: grey;
     position: fixed;
@@ -165,7 +153,7 @@
     border-radius: 25%;
     font-size: 35px;
     cursor: pointer;
-    color: blue;
+    color: white;
     outline: none;
     margin: 1%;
     padding-top: 0px;
@@ -173,7 +161,6 @@
     left: 0;
     z-index: 0;
   }
-
 
   .hamburger-btn:hover {
     transform: scale(1.0);
@@ -305,19 +292,20 @@
     cursor: pointer;
   }
 
-  #register.register {
+  .registerButton {
     width: 100%;
     height: 100%;
     background-color: black;
+    border: solid grey 2px;
+    padding: 13px;
+    margin-top: 0;
     font-weight: bold;
     border-radius: 10px;
-    border: solid grey 2px;
     font-size: 15px;
     color: silver;
-    padding: 12px;
   }
 
-  #register.register:hover {
+  .registerButton:hover {
     background-color: grey;
     color: blue;
     font-size: 16px;

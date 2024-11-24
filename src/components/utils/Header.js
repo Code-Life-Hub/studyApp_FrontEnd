@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import AppRouter from "../routes/AppRouter";
+import { Link } from "react-router-dom";
 import "../../styles/App.css";
 
 function Header() {
-  // State to handle the visibility of the nav menu
   const [isNavVisible, setIsNavVisible] = useState(false);
+
   const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
+    setIsNavVisible((prevState) => !prevState);
   };
+
   // If statement handling the visibility of the hamburger button
   React.useEffect(() => {
     const button = document.querySelector(".hamburger-btn");
@@ -15,7 +16,7 @@ function Header() {
       button.style.visibility = isNavVisible ? "hidden" : "visible";
     }
   }, [isNavVisible]);
-  // rendering below
+
   return (
     <header className="App-header">
       <button
@@ -25,9 +26,29 @@ function Header() {
       >
         ☰
       </button>
-
-      <AppRouter isNavVisible={isNavVisible} toggleNav={toggleNav} />
-
+      {isNavVisible && (
+        <nav className="nav-menu">
+          <ul className="nav">
+            <li className="navLink">
+              <Link className="navLink" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="navLink">
+              <Link className="navLink" to="/userRegister">
+                Register
+              </Link>
+            </li>
+          </ul>
+          <button
+            onClick={toggleNav}
+            className="closeNavButton"
+            title="Click to Close Menu"
+          >
+            X
+          </button>
+        </nav>
+      )}
     </header>
   );
 }
