@@ -1,7 +1,7 @@
 import axios from "axios";
-
+// http://localhost:3001
 const API = axios.create({
-  baseURL: "http://localhost:3001/api/users", // Backend base URL
+  baseURL: "https://studyapp-backend-bjka.onrender.com/api/users", // Backend base URL
 });
 
 API.interceptors.request.use((request) => {
