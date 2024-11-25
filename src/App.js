@@ -4,7 +4,6 @@ import "./styles/Footer.css";
 import Footer from "./components/utils/Footer";
 import CookiesConsent from "./components/utils/CookiesConsent";
 import ScrollToTop from "./components/utils/ScrollToTop";
-import ShowPsw from "./components/utils/ShowPsw";
 import Header from "./components/utils/Header";
 
 function App() {
@@ -25,20 +24,31 @@ function App() {
                 autoCorrect="off"
                 autoCapitalize="off"
               />
-              <label className="Password">Password</label>
+              <label className="password">Password</label>
               <input
-                className="Password"
+                className="passwordLogin"
                 type="password"
-                id="Password"
+                id="password"
                 autoCorrect="off"
                 autoCapitalize="off"
+                autofill="on"
               />
               <div className="ShowPsw">
-                <label className="password">Show Password</label>
+                <label className="ShowPassword" htmlFor="showPasswordCheckbox">
+                  Show Password
+                </label>
                 <input
+                  id="showPasswordCheckbox" // Match the id here
                   className="ShowPswCb"
                   type="checkbox"
-                  onClick={ShowPsw}
+                  onChange={(e) => {
+                    const passwordInput = document.getElementById("password");
+                    if (passwordInput) {
+                      passwordInput.type = e.target.checked
+                        ? "text"
+                        : "password";
+                    }
+                  }}
                 />
               </div>
             </div>
