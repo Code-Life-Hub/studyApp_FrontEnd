@@ -1,5 +1,89 @@
 @media (min-width: 769px) {
 
+  /* UserRegister Page */
+
+  .Column-Container {
+    display: flex;
+    width: 75vw;
+    flex-direction: column;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Cursive, 'Times New Roman';
+  }
+
+  .Column-1 {
+    display: flex;
+    width: 45vw;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  .Column-2 {
+    display: flex;
+    width: 45vw;
+    justify-content: space-between;
+  }
+
+  .personal-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    color: silver;
+    border: solid silver 5px;
+  }
+
+  .contact-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    color: silver;
+    border: solid silver 5px;
+  }
+
+  .education-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    color: silver;
+    border: solid silver 5px;
+  }
+
+  .account-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    color: silver;
+    border: solid silver 5px;
+  }
+
+  .RegisterLegend {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: cursive, Times New Roman;
+  }
+
+  .RegisterLabel {
+    color: white;
+    font-family: cursive, Times New Roman;
+    font-weight: bold;
+  }
+
+  .RegisterInput {
+    background-color: black;
+    color: silver;
+    font-weight: bold;
+    border: solid silver 3px;
+  }
+
+
+
+  /* App Mains */
   .App-header {
     display: flex;
     justify-content: flex-end;
@@ -51,6 +135,8 @@
 
   .newUserForm {
     color: white;
+    padding-top: 0px;
+    margin-top: 0;
   }
 
   #username_or_email.username_or_email {
