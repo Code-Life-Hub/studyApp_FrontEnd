@@ -1,17 +1,16 @@
 import axios from "axios";
+
 // http://localhost:3001
 const API = axios.create({
-  baseURL: "https://studyapp-backend-bjka.onrender.com/api/users", // Backend base URL
+  baseURL: process.env.REACT_APP_API_URL + "/api/users",
 });
 
-API.interceptors.request.use((request) => {
-  console.log("Starting Request", request);
-  return request;
-});
-
-API.interceptors.response.use((response) => {
-  console.log("Response:", response);
-  return response;
-});
+API.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.error("API Error:", error.response || error.message);
+    return Promise.reject(error);
+  }
+);
 
 export default API;

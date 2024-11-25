@@ -53,6 +53,12 @@
         outline: none;
     }
 
+    input:hover {
+        background-color: #f0f8ff;
+    }
+
+
+
     /* Select dropdown */
     select {
         appearance: none;

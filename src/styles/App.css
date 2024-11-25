@@ -1,5 +1,11 @@
 @media (min-width: 769px) {
 
+  :root {
+    --primary-color: #333;
+    --secondary-color: #f0f0f0;
+  }
+
+
   /* UserRegister Page */
 
   .Column-Container {
@@ -157,11 +163,13 @@
     background-color: black;
   }
 
-  .Password {
-    display: flex;
+
+  .passwordLogin {
+    border: solid black 2px;
+    background-color: silver;
   }
 
-  #Password.Password {
+  #password.password {
     width: 60%;
     border: solid black 2px;
     background-color: silver;
@@ -171,16 +179,8 @@
     font-family: Times New Roman;
   }
 
-  #Password.Password:active {
+  #password.password:active {
     background-color: black;
-  }
-
-  .password {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    font-size: 14px;
   }
 
   .navLinks {
@@ -325,30 +325,30 @@
     font-size: 15px;
   }
 
-  .ShowPsw {
+  .ShowPassword {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    color: black;
-    font-size: 14px;
+    align-items: left;
+    color: rgb(45, 102, 247);
+    text-decoration: underline;
+    font-size: 15px;
     cursor: pointer;
-    margin-top: 2vh;
+    font-weight: bold;
+    font-family: Cursive;
+    padding: 0;
   }
 
-  .ShowPsw:hover {
-    align-self: center;
-    transform: scale(1.2);
-  }
+  .ShowPassword:hover {
+    color: white;
+    font-style: italic;
 
-  .ShowPswCb {
-    align-self: center;
-    transform: scale(1.2);
+
   }
 
   .ShowPswCb:hover {
-    transform: scale(1.5);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
   }
 
   .ForgotPsw {
