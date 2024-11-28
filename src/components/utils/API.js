@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// http://localhost:3001
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL + "/api/users",
+  baseURL: "https://studyapp-backend-bjka.onrender.com/api/users",
 });
 
 API.interceptors.response.use(
