@@ -20,7 +20,6 @@ export default class UserCreateForm extends Component {
       education_level: "",
       favorite_subject: "",
       user_password: "",
-      profile_picture: null,
       error: null,
     };
   }
@@ -30,14 +29,9 @@ export default class UserCreateForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  onChangeProfilePicture = (e) => {
-    this.setState({ profile_picture: e.target.files[0] });
-  };
-
   onSubmit = (e) => {
     e.preventDefault();
 
-    // Create FormData to handle both text fields and file
     const formData = new FormData();
     for (let key in this.state) {
       if (key !== "error" && this.state[key] !== null) {
@@ -68,7 +62,6 @@ export default class UserCreateForm extends Component {
           education_level: "",
           favorite_subject: "",
           user_password: "",
-          profile_picture: null,
           error: null,
         });
       })
@@ -230,15 +223,6 @@ export default class UserCreateForm extends Component {
                 value={this.state.user_password}
                 onChange={this.onChange}
                 required
-              />
-            </label>
-            <label>
-              Profile Picture:
-              <input
-                type="file"
-                name="profile_picture"
-                onChange={this.onChangeProfilePicture}
-                accept="image/*"
               />
             </label>
           </fieldset>
