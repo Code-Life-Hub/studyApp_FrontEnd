@@ -2,18 +2,6 @@ import React, { Component } from "react";
 import "../../styles/App.css";
 import API from "../utils/API";
 import Header from "../utils/Header";
-const express = require("express");
-const cors = require("cors");
-const app = express();
-
-const corsOptions = {
-  origin: "https://study-buddy-ewbor.ondigitalocean.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
-app.use(express.json());
 
 export default class UserCreateForm extends Component {
   constructor(props) {
@@ -35,6 +23,7 @@ export default class UserCreateForm extends Component {
       error: null,
     };
   }
+
   // Event Handlers
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
