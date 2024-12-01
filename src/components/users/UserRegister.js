@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../../styles/App.css";
 import API from "../utils/API";
 import Header from "../utils/Header";
+// CORS
+import cors from "cors";
 
 export default class UserCreateForm extends Component {
   constructor(props) {
@@ -22,6 +24,16 @@ export default class UserCreateForm extends Component {
       user_password: "",
       error: null,
     };
+  }
+  // CORS
+  componentDidMount() {
+    const corsOptions = {
+      origin: "https://study-buddy-ewbor.ondigitalocean.app/",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true,
+    };
+    this.app.use(cors(corsOptions));
+    console.log("CORS enabled for:", corsOptions.origin);
   }
 
   // Event Handlers
