@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://study-buddy-ewbor.ondigitalocean.app:8080",
+  baseURL: "https://study-buddy-ewbor.ondigitalocean.app/api",
 });
 
 API.interceptors.response.use(
