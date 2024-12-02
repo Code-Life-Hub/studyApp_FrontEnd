@@ -8,13 +8,13 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
     "cors": "^2.8.5",
+    "node": "^20.18.1",
     "react": "^18.2.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4",
-    "node": "20.18.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
