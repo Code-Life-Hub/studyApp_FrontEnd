@@ -42,7 +42,7 @@ export default class UserCreateForm extends Component {
     // Make the API request
     API.post("/api/users/signup", formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "form-data",
       },
     })
       .then((res) => {
