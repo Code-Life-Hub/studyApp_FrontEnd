@@ -40,14 +40,14 @@ export default class UserCreateForm extends Component {
     }
 
     // Make the API request
-    API.post("/signup", formData, {
+    API.post("/users/signup", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
     })
       .then((res) => {
         console.log("User registered successfully:", res.data);
-        
+
         // Clear form fields
         this.setState({
           user_full_name: "",
