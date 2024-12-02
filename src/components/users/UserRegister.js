@@ -106,8 +106,8 @@ export default class UserCreateForm extends Component {
                 name="Age"
                 value={this.state.Age}
                 onChange={this.onChange}
-                min="13"
-                max="120"
+                min="18"
+                max="99"
                 required
               />
             </label>
