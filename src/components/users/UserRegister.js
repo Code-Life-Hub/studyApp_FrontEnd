@@ -47,7 +47,7 @@ export default class UserCreateForm extends Component {
     })
       .then((res) => {
         console.log("User registered successfully:", res.data);
-
+        
         // Clear form fields
         this.setState({
           user_full_name: "",
